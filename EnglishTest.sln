@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishTest.Api", "EnglishTest.Api\EnglishTest.Api.csproj", "{A46FDEB1-5605-4964-B884-AD6ACE092FEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishTest.Api", "src\Services\EnglistTestService\EnglishTest.Api\EnglishTest.Api.csproj", "{A46FDEB1-5605-4964-B884-AD6ACE092FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishTest.Model", "..\EnglishTest.Model\EnglishTest.Model.csproj", "{C208B482-968F-47C5-BAE4-C2C28F33FCC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishTest.Model", "src\Services\EnglistTestService\EnglishTest.Model\EnglishTest.Model.csproj", "{C208B482-968F-47C5-BAE4-C2C28F33FCC6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{C7D73616-FD2A-48B8-859C-04EFC38F4240}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C7D73616-FD2A-48B8-859C-04EFC38F4240}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{915A6642-FD4B-4FFB-A463-D05F41740EC4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "src\Services", "{915A6642-FD4B-4FFB-A463-D05F41740EC4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestService", "TestService", "{01F383A9-1FF0-417E-A32E-08627A894B5B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnglistTestService", "src\Services\EnglistTestService", "{01F383A9-1FF0-417E-A32E-08627A894B5B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "UserService", "{11C48BEC-DD3A-4E46-848E-5DE4605BE9EC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "src\Services\UserService", "{11C48BEC-DD3A-4E46-848E-5DE4605BE9EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Model", "Users.Model\Users.Model.csproj", "{29F4CFD2-9D74-49E4-900B-BA8E6D9E3102}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Model", "src\Services\UserService\Users.Model\Users.Model.csproj", "{29F4CFD2-9D74-49E4-900B-BA8E6D9E3102}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
