@@ -9,11 +9,11 @@ namespace Users.Model
     {
         public CPassport(){
 
-            
+            Id = new Guid();
         }
-        public int Id { get; set; }
-        public int PassportNumber { get; set; }
+        public Guid Id { get; set; }
+        public string PassportNumber { get; set; }
         public string Nationality { get; set; }
-        public string SomethingElse { get; set; }
+        public string Other { get; set; }
     }
 }

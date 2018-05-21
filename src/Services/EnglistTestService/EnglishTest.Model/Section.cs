@@ -11,12 +11,12 @@ namespace EnglishTest.Model
     {
         public CSection()
         {
-            Test = new List<CTest>();
+            TestId = new List<CTest>();
             Id = new Guid();
         }
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public IEnumerable<CTest> Test { get; set; }
+        public IEnumerable<CTest> TestId { get; set; } 
     }
 }

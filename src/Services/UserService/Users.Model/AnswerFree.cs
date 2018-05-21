@@ -8,11 +8,14 @@ namespace Users.Model
     {
         public CAnswerFree()
         {
-            TestRequest = new CTestRequest();
+            TestExist = new CTestExist();
             Id = new Guid();
+            QuestionId = new Guid();
         }
         public Guid Id { set; get; }
-        public CTestRequest TestRequest { get; set; }
+        public CTestExist TestExist { get; set; }
+        public Guid QuestionId { get; set; }
+        public string Data { get; set; }
 
 
     }

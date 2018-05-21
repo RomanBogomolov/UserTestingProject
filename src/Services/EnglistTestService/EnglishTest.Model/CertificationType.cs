@@ -6,9 +6,14 @@ namespace EnglishTest.Model
 {
     class CCertificationType
     {
+     
+        public CCertificationType()
+        {
+            Id = new Guid();
+           
+        }
+        public Guid Id { get; set; }
+        public string Type { get; set; }
         
-        public int Id { get; set; }
-        public int Type { get; set; }
-
     }
 }

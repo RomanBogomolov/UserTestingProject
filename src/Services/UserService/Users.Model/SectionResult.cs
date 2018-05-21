@@ -8,12 +8,14 @@ namespace Users.Model
     {
         public CSectionResult()
         {
-            TestRequest = new CTestRequest();
+            TestExistID = new List<CTestExist>();
             Id = new Guid();
+            GradeCriteriaId = new Guid();
         }
         public Guid Id { set; get; }
 
-        public CTestRequest TestRequest { get; set; }
+        public IEnumerable  <CTestExist> TestExistID { get; set; }
         public int Grade { get; set; }
+        public Guid GradeCriteriaId { get; set; }
     }
 }

@@ -6,7 +6,11 @@ namespace Users.Model
 {
     public class CRegion
     {
-        public int Id { get; set; }
+        public CRegion() {
+            Id = new Guid();
+        }
+
+        public Guid Id { get; set; }
         public string Name { get; set; }
     }
 }

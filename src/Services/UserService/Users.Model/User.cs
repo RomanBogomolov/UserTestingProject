@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace Users.Model
 {
     public class CUser
@@ -9,15 +9,14 @@ namespace Users.Model
 
             Id = new Guid();
             Passport = new CPassport();
-            RegistrationRegion = new CRegion();
+            RegistrationRegion = new List <CRegion>();
         }
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Patronymic { get; set; }
+        public string FullName { get; set; }
+  
         public CPassport Passport { get; set; }
 
-        public CRegion RegistrationRegion { get; set; }
+        public IEnumerable <CRegion> RegistrationRegion { get; set; }
         
     }
 }

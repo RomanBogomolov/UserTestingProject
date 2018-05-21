@@ -8,12 +8,12 @@ namespace Users.Model
     {
         public CGeneralResult() {
 
-            TestRequest = new CTestRequest();
+            TestExist = new List<CTestExist>();
         }
         public Guid ID { get; set; }
-        public CTestRequest TestRequest { get; set; }
+        public IEnumerable <CTestExist> TestExist { get; set; }
         public DateTime ResultDate { get; set; }
-        public int Grade { get; set; }
+        public decimal Grade { get; set; }
     }
 }
 

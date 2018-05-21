@@ -4,16 +4,16 @@ using System.Text;
 
 namespace EnglishTest.Model
 {
-    class CQuestionType
+    class COpenQuestionCriteria
     
     {
-        public CQuestionType() {
+        public COpenQuestionCriteria() {
 
             Id = new Guid();
 
         }
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string Descripion { get; set; }
 
     }
 }

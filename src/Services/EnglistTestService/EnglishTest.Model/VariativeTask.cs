@@ -9,10 +9,11 @@ namespace EnglishTest.Model
         public CVariativeTask()
         {
             Id = new Guid();
+            QuestionId = new List<CQuestion>();
         }
 
         public Guid Id { get; set; }
-        public Guid QuestionId { get; set; }
+        public IEnumerable<CQuestion> QuestionId { get; set; }
         public string AnswerVariant { get; set; }
         public bool IsRight { get; set; }
 
