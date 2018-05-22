@@ -10,12 +10,15 @@ namespace Users.Model
 
             //TestID = new CTestRequest();
             Id = new Guid();
+            CertificateNumber = new Guid();
+
 
         }
         public Guid Id { get; set; }
         public string Status { get; set; }
-        //public CTestRequest TestID { get; set; }
-        public string CertifcateNumber { get; set; }
+        public Guid CertificateNumber { get; set; }
+        public Guid TestId { get; set; }
+        
 
     }
 }

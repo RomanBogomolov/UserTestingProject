@@ -53,7 +53,7 @@ namespace UnitTests
                 //act
                 /* создадим нового пользователя */
                 _userRepository.CreateUser(_user).GetAwaiter().GetResult();
-
+                _userRepository.Test();
                 /*получим из БД созданного пользователя*/
                 var newUser = _userRepository.GetUserById(_user.Id).Result;
 

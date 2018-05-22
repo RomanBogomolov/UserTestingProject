@@ -6,7 +6,10 @@ namespace Users.Model
 {
     public class CRoles
     {
-        public int Id { get; set; }
-        public int Name { get; set;}
+        public CRoles() {
+            Id = new Guid();
+        }
+        public Guid Id { get; set; }
+        public string Name { get; set;}
     }
 }

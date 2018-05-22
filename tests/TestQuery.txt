@@ -1,0 +1,1 @@
+select * from [dbo].[User] where id = 'EF31A43B-D345-4CE7-8ACC-3D1CD217C723'

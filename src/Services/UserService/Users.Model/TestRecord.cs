@@ -8,11 +8,12 @@ namespace Users.Model
     {
         public TestRecord()
         {
-            TestRequest = new CTestRequest();
+            TestExistId = new List<CTestExist>();
             Id = new Guid();
         }
         public Guid Id { get; set; }
-        public CTestRequest TestRequest { set; get; }
+        public IEnumerable <CTestExist> TestExistId { set; get; }
+        public string Data { get; set; }
 
 
     }

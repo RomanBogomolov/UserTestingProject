@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace Users.Model
 {
     public class CUser
@@ -16,5 +16,7 @@ namespace Users.Model
         public string FullName { get; set; }
         public CPassport Passport { get; set; }
         public CRegion RegistrationRegion { get; set; }
+
+        /* Может быть много регионов - поправить */
     }
 }

@@ -31,7 +31,7 @@ namespace UserServices.DataAccess.SQL
                 passportId = user.Passport.PassportId,
                 passportNumber = user.Passport.PassportNumber,
                 nationality = user.Passport.Nationality,
-                other = user.Passport.SomethingElse
+                other = user.Passport.Other
             });
         }
 

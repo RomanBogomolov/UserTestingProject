@@ -10,8 +10,9 @@ namespace Users.Model
         {
             User = new List<CUser>();
             Roles = new List<CRoles>();
+            ID = new Guid();
         }
-        public int ID { get; set;}
+        public Guid ID { get; set;}
         public IEnumerable <CUser> User { get; set; }
         public IEnumerable<CRoles> Roles { get; set; }
 
