@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Services\UserService\Users.Model\Users.Model.csproj" />
+    <ProjectReference Include="..\src\Services\UserService\UserService.DataAccess\UserService.DataAccess.csproj" />
+    <ProjectReference Include="..\src\Services\UserService\UserServices.DataAccess.SQL\UserServices.DataAccess.SQL.csproj" />
+  </ItemGroup>
+
+</Project>

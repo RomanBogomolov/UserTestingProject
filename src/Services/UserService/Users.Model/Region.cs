@@ -6,7 +6,7 @@ namespace Users.Model
 {
     public class CRegion
     {
-        public int Id { get; set; }
+        public Guid RegionId { get; set; }
         public string Name { get; set; }
     }
 }
