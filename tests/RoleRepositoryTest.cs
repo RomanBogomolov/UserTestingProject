@@ -53,14 +53,13 @@ namespace UnitTests
         {
             try
             {
-                //act
-                /* берем пользователя по id */
+                
 
                 //создаем роль
                 _roleRepository.CreateRole(_role).GetAwaiter().GetResult();
                 var createdRole = _roleRepository.GetRoleByName(_role.Name).GetAwaiter().GetResult();
                 _userRepository.AddUserToRole(_user.Id, createdRole.Id).GetAwaiter().GetResult();
-                /*получим из БД созданного пользователя*/
+                //добавляем роль пользователю
 
 
                 //accert
@@ -72,7 +71,7 @@ namespace UnitTests
             }
             finally
             {
-                /* удалим тестового пользователя */
+                /* удалим роль */
                 _roleRepository.DeleteRole(_role.Id).GetAwaiter().GetResult();
             }
         }
