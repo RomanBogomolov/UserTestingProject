@@ -10,7 +10,7 @@ using UserServices.DataAccess.SQL.SQLQuery;
 
 namespace UserServices.DataAccess.SQL
 {
-    public class UserRepository : DefaultRepository, IUserRepository
+    public class UserRepository : DefaultRepository, IUserRepository 
     {
         public UserRepository(string connectionString) : base(connectionString)
         {
@@ -69,9 +69,28 @@ namespace UserServices.DataAccess.SQL
             await ExecuteAsync("up_DeleteUser", new {userId}, CommandType.StoredProcedure);
         }
 
-        public Task Test()
+
+        
+
+        public async Task AddUserToRole(Guid userId, Guid roleId)
         {
-            return Task.FromResult(0);
+            if (userId== Guid.Empty)
+            {
+                throw new ArgumentOutOfRangeException(nameof(userId));
+            }
+
+            if (roleId == Guid.Empty)
+            {
+                throw new ArgumentOutOfRangeException(nameof(roleId));
+            }
+
+
+                await ExecuteAsync("up_AddUserToRole", commandType: CommandType.StoredProcedure, parameters: new
+            {
+                userId, roleId
+            });
         }
+
+       
     }
 }

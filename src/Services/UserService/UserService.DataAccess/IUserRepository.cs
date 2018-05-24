@@ -9,6 +9,7 @@ namespace UserService.DataAccess
         Task CreateUser(CUser user);
         Task<CUser> GetUserById(Guid userId);
         Task DeleteUser(Guid userId);
-        Task Test();
+       
+        Task AddUserToRole(Guid userId, Guid roleId);
     }
 }

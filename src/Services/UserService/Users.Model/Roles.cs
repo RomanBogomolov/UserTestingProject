@@ -6,7 +6,8 @@ namespace Users.Model
 {
     public class CRoles
     {
-        public CRoles() {
+        public CRoles()
+        {
             Id = new Guid();
         }
         public Guid Id { get; set; }

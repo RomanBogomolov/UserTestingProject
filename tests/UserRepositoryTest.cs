@@ -12,7 +12,7 @@ namespace UnitTests
         private IUserRepository _userRepository;
 
         private readonly string _connectionString =
-            @"Server=ORIT-3\ORITSQL2017;Database=UsersDb;user id=katia;password=1234567;MultipleActiveResultSets=true;Connect Timeout=30;";
+            @"Server=localhost;Database=UsersDb;Trusted_Connection=True;MultipleActiveResultSets=true;Connect Timeout=30;";
 
         private CUser _user;
 
@@ -37,6 +37,8 @@ namespace UnitTests
                     RegionId = new Guid("41E65243-BCE5-4583-B652-3702702B4C46") // существующий из БД
                 }
             };
+
+            
         }
 
         [TearDown]
@@ -53,7 +55,6 @@ namespace UnitTests
                 //act
                 /* создадим нового пользователя */
                 _userRepository.CreateUser(_user).GetAwaiter().GetResult();
-                _userRepository.Test();
                 /*получим из БД созданного пользователя*/
                 var newUser = _userRepository.GetUserById(_user.Id).Result;
 

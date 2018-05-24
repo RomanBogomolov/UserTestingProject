@@ -12,8 +12,7 @@ namespace EnglishTest.Model
         }
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public bool IsFree { get; set; }
+        
         public Guid CertificateTypeId { set; get; }
         public int MinGrade { get; set; }
     }

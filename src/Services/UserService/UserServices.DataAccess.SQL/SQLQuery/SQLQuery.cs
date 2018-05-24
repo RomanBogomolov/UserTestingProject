@@ -8,5 +8,9 @@ namespace UserServices.DataAccess.SQL.SQLQuery
     {
         public static string SelectUserById =>
             "SELECT id,fullname,regionId,[name],passportId,nationality,passportNumber,other from uf_SelectUserById(@userId)";
+        public static string SelectRoleByName =>
+            "SELECT id,name from uf_SelectRoleByName(@name)";
+
     }
+
 }
