@@ -20,6 +20,11 @@ namespace EnglishTest.Api
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .ConfigureAppConfiguration((hostContext, config) =>
+                {
+                    config.Sources.Clear();
+                    config.AddJsonFile("Setting.json", optional: true);
+                })
                 .Build();
     }
 }

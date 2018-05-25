@@ -14,6 +14,7 @@ namespace UserServices.DataAccess.SQL
     {
         public UserRepository(string connectionString) : base(connectionString)
         {
+
         }
 
         public async Task CreateUser(CUser user)
@@ -66,7 +67,7 @@ namespace UserServices.DataAccess.SQL
                 throw new ArgumentOutOfRangeException(nameof(userId));
             }
 
-            await ExecuteAsync("up_DeleteUser", new {userId}, CommandType.StoredProcedure);
+            await ExecuteAsync("up_DeleteUser", new { userId }, CommandType.StoredProcedure);
         }
 
 
