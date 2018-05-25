@@ -31,6 +31,7 @@ namespace EnglishTest.Api
             var connectionString = Configuration["ConnnectionString"];
             services.AddSingleton<IUserRepository>(new UserRepository(connectionString));
             services.AddSingleton<IRoleRepository>(new RoleRepository(connectionString));
+            services.AddSingleton<IAnswerRepository>(new AnswerRepository(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
