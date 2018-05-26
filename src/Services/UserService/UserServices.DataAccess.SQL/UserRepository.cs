@@ -23,17 +23,25 @@ namespace UserServices.DataAccess.SQL
             {
                 throw new ArgumentNullException(nameof(user));
             }
-
-            await ExecuteAsync("up_CreateUserPassportUserRole", commandType: CommandType.StoredProcedure, parameters: new
+            try
             {
-                id = user.Id,
-                fullname = user.FullName,
-                registrationRegionId = user.RegistrationRegion.RegionId,
-                passportId = user.Passport.PassportId,
-                passportNumber = user.Passport.PassportNumber,
-                nationality = user.Passport.Nationality,
-                other = user.Passport.Other
-            });
+                await ExecuteAsync("up_CreateUserPassportUserRole", commandType: CommandType.StoredProcedure, parameters: new
+                {
+                    id = user.Id,
+                    fullname = user.FullName,
+                    registrationRegionId = user.RegistrationRegion.RegionId,
+                    passportId = user.Passport.PassportId,
+                    passportNumber = user.Passport.PassportNumber,
+                    nationality = user.Passport.Nationality,
+                    other = user.Passport.Other
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+            
         }
 
         public async Task<CUser> GetUserById(Guid userId)
